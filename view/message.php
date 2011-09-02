@@ -1,0 +1,1 @@
+<div align="center" style="padding-top:20px;"><strong><?=$message?></strong></div>

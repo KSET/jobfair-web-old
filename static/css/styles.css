@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f6f6f6;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.8em;
+    color: #222;
+}
+
+/*
+@font-face 
+{
+    font-family: "DroidSans";
+    src: url(../fonts/DroidSans.ttf);
+}
+*/
+
+img {
+    border: 0px;
+}
+
+a {
+    color: D50109;
+    outline: 0px;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+ul {
+    margin: 0px 20px;
+    padding: 0px;
+    list-style-position: inside;
+    list-style-image: url(../images/list_marker.png);
+    list-style-type: square;
+}
+
+h1, h2, div#title {
+    font-family: "Trebuchet MS","Myriad Pro","Bitstream Vera Sans",FreeSans,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    text-shadow:1px 1px 1px #DDDDDD;
+}
+
+h1 b { color: #fe7929; }
+
+/* MAIN BODY ELEMENTS --------------------------------------------- */
+
+div#container {
+    margin: 0px auto 5px auto;
+    width: 950px;
+}
+
+div#header {
+    margin: 10px 0px 0px 0px;
+    height: 65px;
+}
+
+div#body {
+    background-color: #fff;
+    width: 950px;
+    border: 1px solid #d9d9d9;
+
+    -moz-box-shadow: 0 0 15px #ccc;
+    -webkit-box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px #ccc;
+}
+
+div#overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    background-color: #000;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";	
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    z-index: 100;
+    display: none;
+}
+
+div#footer {
+    clear: both;
+    margin: 5px 0px;
+    color: #888;
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+div#footer strong { font-size: 1.1em;}
+
+/* HEADER --------------------------------------------------------- */
+
+div#title  {
+    float:left;
+    background: transparent url(../images/titlelogo.png) no-repeat left top;
+    padding-left: 20px;
+    padding-top: 44px;
+}
+div#title h1, h2{
+    margin: 0px;
+}
+
+div#topBanner a {
+    float: right;
+    display: block;
+    height: 50px;
+    background-image: url(../images/organizatori.png);  
+    margin-left: 20px;
+}
+
+#org_hup { width: 34px; background-position: -183px -50px;}
+#org_hup:hover { background-position: -183px 0px;}
+
+#org_hgk { width: 34px; background-position: -149px -50px;}
+#org_hgk:hover { background-position: -149px 0px;}
+
+#org_fer { width: 35px; background-position: -114px -50px;}
+#org_fer:hover { background-position: -114px 0px;}
+
+#org_kset { width: 81px; background-position: -33px -50px;}
+#org_kset:hover { background-position: -33px 0px;}
+
+#org_ssfer { width: 33px; background-position: 0px -50px;}
+#org_ssfer:hover { background-position: 0px 0px;}
+
+
+
+/* MOTIF ---------------------------------------------------------- */
+
+div#jumbo {
+    height: 300px;
+    width: 950px;
+    background-color: #007BA7;
+}
+
+div#jumbonav {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 880px;
+    padding: 3px 0px 0px 10px;
+    background: transparent url(../images/jumbonav.png) no-repeat left top;
+    width: 55px;
+    height: 22px;
+    z-index: 5;
+}
+
+div#jumbonav a {
+    color: #ddd;
+    font-weight: bold;
+}
+
+div#jumbonav a:hover {
+    text-decoration: none;
+    color: #FDB813;
+}
+div#jumbonav a.active {
+    color: #FDB813;
+}
+
+div#slideshow { position: relative; }
+
+div#slideshow img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* CONTENT -------------------------------------------------------- */
+
+div#content {}
+
+#colLeftTop h1 {
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #9fd0e7;
+    padding: 3px 5px;
+    color: #333;
+}
+
+#colRight {
+    float: right;
+    width: 250px;
+    padding: 0px 10px 0px 0px;   
+}
+
+#colLeft {
+    float: left;
+    width: 650px;
+    padding: 0px 0px 0px 10px;   
+}
+
+#colLeft p {
+    text-indent: 20px;
+    line-height: 1.3em;
+    letter-spacing: 0.1px;
+}
+
+.subColumn h1 {
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #9fd0e7;
+    padding: 0px 5px;
+    color: #333;
+}
+
+.subColumn {
+    float: left;
+    width: 200px;
+    margin-right: 15px;
+}
+
+#colLeftTop .box {
+    float: left;
+    display: block;
+    width: 310px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#colLeftTop .box > p {
+    
+    top: 15px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    position: fixed;
+    /*
+    position: absolute;
+    margin-left: -240px;
+    width: 550px;
+    */
+    border: 1px solid #ddd;
+    background-color: #eee;
+    padding: 10px;
+    display: block; 
+    z-index: 101;
+    text-indent: 0px;
+    display: none;
+}
+
+#colLeftTop .box > h1 {
+    text-align: center;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#colLeftTop .box img {
+    display: block;
+    text-align: center;
+}
+
+/*
+#colLeftTop .even {
+  margin-right: 20px;
+}
+#colLeftTop .even > p {
+  margin-left: 0px;
+}
+*/
+
+/* NAV ------------------------------------------------------------ */
+
+div#nav {
+    font-family: "Trebuchet MS","Myriad Pro","Bitstream Vera Sans",FreeSans,sans-serif;
+    font-weight: bold;
+    color: #eee;
+
+    width: 950px;
+    height: 22px;
+    background: #222;
+    border-bottom: 1px solid #000;
+}
+
+div#nav a {
+    color: #eee;
+    background: #444;
+    padding: 3px 15px;
+    display: block;
+    float: left;
+    height: 16px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-shadow: 1px 1px 1px #000;
+}
+
+div#nav a:hover, div#nav a.active {
+    text-decoration: none;
+    color: #222;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;    
+    text-shadow: 1px 1px 1px #ddd;
+}
+
+
+
+/* BOX ------------------------------------------------------------ */
+
+#colRight .box {
+    background-color: #D50109;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#colRight .box .content {
+    background-color: #f3f3f3;
+    margin-top: 5px;
+    padding: 5px 10px;
+}
+
+#colRight .box > h1 {
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0px;
+    text-shadow:1px 1px 1px #666;
+}
+
+#colRight .box table {
+    font-size: 1em;
+    margin-top: 5px;
+}
+#colRight .box table td { 
+    vertical-align: top; 
+    padding: 2px 3px;
+}
+
+input, textarea, select{
+border: 1px solid #d9d9d9;
+background-color: white;
+}
+
+#cv {
+font-size: 12px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* orange: #fe7929 */
